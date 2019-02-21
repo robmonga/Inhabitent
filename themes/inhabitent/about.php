@@ -3,7 +3,7 @@
  * The template for displaying all pages.
  *
  * template name: about.php
- * @package RED_Starter_Theme
+ * @package inhabitent_Theme
  */
 
 get_header(); ?>

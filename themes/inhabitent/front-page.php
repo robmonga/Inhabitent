@@ -21,12 +21,17 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			
 			<?php while ( have_posts() ) : the_post(); ?>
-			<?php $product_posts=inhabitent_get_latest_posts();?>
-				<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-  					<?php  ?>
-				<?php endforeach; wp_reset_postdata(); ?>
-
 				<?php get_template_part( 'template-parts/content' ); ?>
+			<?php $product_posts=inhabitent_get_latest_posts();?>
+
+				<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+					  <?php
+					 the_post_thumbnail('medium_large');
+					 the_date();
+					 comments_number();
+					 the_title();
+					  ?>
+				<?php endforeach; wp_reset_postdata(); ?>
 
 			<?php endwhile; ?>
 
