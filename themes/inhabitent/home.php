@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for Journal page index. 
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 get_header(); ?>
@@ -11,8 +11,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
+			
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+				<?php get_template_part( 'template-parts/content' ); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
@@ -21,4 +22,3 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
-``

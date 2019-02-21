@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'template-parts/content' ); ?>
 			<?php $product_posts=inhabitent_get_latest_posts();?>
-
+		<!-- get blog posts  -->
 				<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 					  <?php
 					 the_post_thumbnail('medium_large');
@@ -32,7 +32,19 @@ get_header(); ?>
 					 the_title();
 					  ?>
 				<?php endforeach; wp_reset_postdata(); ?>
-
+				<!-- end of blog post retrieval -->
+			<!-- add in the product categories  -->
+				<section>
+           <?php $product_types=get_terms('product_type');?>
+           <?php foreach ( $product_types as $term ) : setup_postdata( $term ); ?>
+              <div>
+                 <img src=<?php echo get_template_directory_uri().'/assets/images/' . $term->slug . '.svg'?>>
+                 <p><?php echo $term->description ?></p>
+                 <a href=<?php echo get_term_link($term)?>> <?php echo $term->name?> stuff</a>
+              </div>
+           <?php endforeach; wp_reset_postdata(); ?>
+        </section>
+<!-- end of the product categories  -->
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
@@ -46,5 +58,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary --> 
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
