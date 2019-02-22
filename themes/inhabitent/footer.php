@@ -23,16 +23,18 @@
 				<i class="fab fa-twitter-square"></i>
 				<i class="fab fa-instagram"></i>
 				</div>
+				
 				<div class="business-hours">
 				<p>Business Hours</p><br>
 				<p>Monday-Friday: 9am to 5pm<br>
 				   Saturday: 10am to 2pm<br>
 				   Sunday: Closed</p>
 				</div>
+				
 				<div class="copyright">
 				<p>Copyright &#169; 2019 Inhabitent</p> </div>
 				<div>
-				<a href="#"><img src="assets/images/inhabitent-logo-text-dark.svg" alt="inhabitent logo"></a>
+				<a href="#"><img src="/assets/images/inhabitent-logo-text-dark.svg" alt="inhabitent logo"></a>
 				</div>
 
 				</div><!-- .site-info -->
