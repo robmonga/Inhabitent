@@ -47,6 +47,21 @@ get_header(); ?>
            <?php endforeach; wp_reset_postdata(); ?>
         </section>
 <!-- end of the product categories  -->
+
+	<!-- adventures section -->
+	<section class="hp-adventures">
+		<?php $adventure=inhabitent_get_latest_adventures();?>
+		<div class="hp-adventure-types">
+				<?php foreach ( $adventure as $post ) : setup_postdata( $post ); ?>
+					  <?php
+					 the_post_thumbnail('medium_large');
+					 the_title();
+					 ?>
+					<input type="button" value="READ MORE" class="homebutton" id="go-to-post" onClick="document.location.href='<?php echo esc_url( get_permalink())?>'" />					 
+				<?php endforeach; wp_reset_postdata(); ?>		
+		</div>
+	</section>
+	<!-- end of adventures  -->
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
