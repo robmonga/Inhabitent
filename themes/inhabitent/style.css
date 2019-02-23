@@ -734,15 +734,25 @@ object {
     text-align: center; }
 
 .site-header {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 15% 50% 35%;
+  grid-template-areas: "sitelogo empty navbar";
+  color: white; }
+
+.site-logo {
+  width: 3rem;
+  grid-area: sitelogo; }
+
+.main-navigation {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-
-.hero-image {
-  background-image: url("../../assets/images/home-hero.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 800px; }
+  display: flex;
+  grid-area: navbar;
+  justify-self: flex-end; }
 
 .hp-products {
   height: 600px;
@@ -754,6 +764,9 @@ object {
       -ms-flex-direction: row;
           flex-direction: row; }
 
+.entry-title {
+  display: none; }
+
 .hp-blog-posts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -762,3 +775,6 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
+
+.hero-image-header {
+  height: 100vh; }

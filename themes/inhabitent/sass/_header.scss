@@ -3,9 +3,21 @@
 // -----------------------------------------------------------------------------------------------------------------------------
 
 .site-header {
-    display: flex;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 15% 50% 35%;
+    grid-template-areas: "sitelogo empty navbar";
+    color: white;
 }
 
-    // .site-branding {
-    //     flex: flex
-    // }
+.site-logo {
+    width: 3rem;
+    grid-area: sitelogo;
+}
+
+.main-navigation {
+    align-items:flex-end;
+    display:flex;
+    grid-area: navbar;
+    justify-self: flex-end;
+}

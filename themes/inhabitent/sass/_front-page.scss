@@ -1,16 +1,12 @@
-.hero-image {
-    background-image: url("../../assets/images/home-hero.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height:800px;
-}
-
 .hp-products {
     height:600px;
     display: flex;
     flex-direction: row;
 }
 
+.entry-title {
+    display: none;
+}
 .hp-blog-posts {
     display: flex;
     flex-direction: row;

@@ -7,6 +7,11 @@
 
 get_header(); ?>
 
+<?php if (have_posts()) : while (have_posts()) : the_post();
+the_content();
+endwhile;
+else : ?>
+<?php endif; ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="hero-image"></div>
@@ -74,5 +79,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary --> 
+
 
 <?php get_footer(); ?>
