@@ -10,12 +10,17 @@ This is a project to showcase HTML/CSS, Wordpress
 -WAMP server stack and database creation using mySQL
 
 ## Assets Used:
-
+### Fonts, etc.
+-Merriweather
+-Fontawesome icons
+- 
+### WP Plug-ins
+-RED boilerplates for business hours, functionality and blocks plugins.
+-query monitor
 
 ##Personal Learnings
 
 ##installation requirements
 Gulp
-Database WAMP
-Wordpress info
-
+Database/server web dev platform like MAMP, XAMP or WAMP
+Wordpress

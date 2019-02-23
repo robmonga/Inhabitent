@@ -48,3 +48,18 @@ function inhabitent_Theme_login_logo() {
 	}
 
 	add_filter('login_headerurl', 'inhabitent_login_url');
+
+
+function inhabitent_post_16($query) {
+
+	if ( is_admin() || ! $query->is_main_query() )
+	return;
+
+	if (is_post_type_archive('product') || is_tax('product_type') ){
+		$query->set('posts_per_page', 16);
+		$query->set('orderby', 'title');
+		$query->set('order', 'ASC');
+		return;
+	} 
+}
+add_action( 'pre_get_posts', 'inhabitent_post_16', 1 );
