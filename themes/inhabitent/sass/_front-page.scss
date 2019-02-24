@@ -1,12 +1,13 @@
+.site-emblem {
+    position: absolute;
+}
+
 .hp-products {
     height:600px;
     display: flex;
     flex-direction: row;
 }
 
-.entry-title {
-    display: none;
-}
 .hp-blog-posts {
     display: flex;
     flex-direction: row;

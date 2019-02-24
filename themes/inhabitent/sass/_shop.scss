@@ -1,0 +1,28 @@
+.taxonomy-headings {
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    text-transform: uppercase;
+    a{
+        margin: 5px;    
+        color:#248A83;
+        text-decoration-line: none;
+    }  
+    a:hover {
+        color:#2f1339;
+    }
+}
+.product-icons {
+    border-top: 2px dashed #a1a1a1a1;
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    width:75%;
+    
+
+
+    .hentry {
+        display:flex;
+        flex-direction: column;
+    }
+}

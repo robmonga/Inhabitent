@@ -14,12 +14,12 @@ get_header(); ?>
 		<?php $product_types=get_terms ?>
 			<header class="page-header">
 			<h1>Shop Stuff</h1>
-				<?php
+				<!-- <?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					?>
+				?> -->
 			</header><!-- .page-header -->
 			<!-- the loop that brings the taxonomy-product  -->
-			<section>
+			<section class="taxonomy-headings">
 			<?php $product_types=get_terms('product_type');?>
            <?php foreach ( $product_types as $term ) : setup_postdata( $term ); ?>
               <div>
@@ -27,8 +27,8 @@ get_header(); ?>
               </div>
            <?php endforeach; wp_reset_postdata(); ?>
 		   </section>
-			
-			<section class="categories">
+			<!-- start of product grid  -->
+			<section class="product-icons">
 		   <?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -44,6 +44,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 	</section>
+	<!-- product grid ends  -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

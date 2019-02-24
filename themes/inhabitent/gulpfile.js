@@ -70,7 +70,8 @@ gulp.task('browser-sync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: 'localhost:3000/inhabitent'
+    proxy: 'localhost/inhabitent',
+    port:3000
   });
 
   gulp.watch(files).on('change', browserSync.reload);
@@ -81,4 +82,4 @@ gulp.task('watch', function() {
   gulp.watch('sass/*.scss', gulp.series('sass'));
 });
 
-gulp.task('default', gulp.parallel('browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('browser-sync', 'watch', 'sass','scripts'));

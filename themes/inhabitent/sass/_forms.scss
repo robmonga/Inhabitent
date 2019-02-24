@@ -60,3 +60,25 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+.search-form {
+	padding-left:10px;
+	fieldset {
+		border: none;
+		.search-field {
+			border: none;
+			background:transparent;
+			::placeholder {
+				color:grey;
+			}
+		}
+		
+	}
+	#mag {
+		color: green;		
+		}
+	.search-btn {
+	padding: 0px;
+	margin:0px;
+		}
+}

@@ -5,9 +5,10 @@
 .site-header {
     width: 100vw;
     display: grid;
-    grid-template-columns: 15% 50% 35%;
-    grid-template-areas: "sitelogo empty navbar";
-    color: white;
+    justify-content: center;
+    grid-template-columns: 10% 50% 40%;
+    grid-template-areas: "sitelogo empty navbar"; 
+    position: absolute;    
 }
 
 .site-logo {

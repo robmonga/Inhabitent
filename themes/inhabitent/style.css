@@ -283,7 +283,9 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: 'Novecento Sans Web';
+  text-transform: uppercase; }
 
 /* Copy */
 p {
@@ -457,16 +459,35 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+.search-form {
+  padding-left: 10px; }
+  .search-form fieldset {
+    border: none; }
+    .search-form fieldset .search-field {
+      border: none;
+      background: transparent; }
+      .search-form fieldset .search-field ::-webkit-input-placeholder {
+        color: grey; }
+      .search-form fieldset .search-field ::-ms-input-placeholder {
+        color: grey; }
+      .search-form fieldset .search-field ::placeholder {
+        color: grey; }
+  .search-form #mag {
+    color: green; }
+  .search-form .search-btn {
+    padding: 0px;
+    margin: 0px; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #248A83; }
   a:visited {
-    color: purple; }
+    color: #248A83; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #2f1339; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -648,6 +669,13 @@ a {
 .bypostauthor {
   display: block; }
 
+/* -----------hero image stuff------------ */
+.hero-image-header {
+  height: 100vh; }
+
+.entry-title {
+  display: none; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -713,32 +741,35 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .site-footer {
-  background-image: url("../../assets/images/dark-wood.png");
-  display: grid;
-  font-family: "Merriweather Web";
-  grid-template-columns: 250px, auto, 250px;
-  grid-template-rows: auto 150px;
-  grid-template-areas: "contact hours logo" "info info info";
-  justify-items: center; }
-  .site-footer .contact-info {
-    grid-area: contact; }
-  .site-footer .business-hours {
-    grid-area: hours; }
-  .site-footer .logo {
-    grid-area: logo;
-    color: white; }
-  .site-footer .site-info {
-    -ms-flex-item-align: end;
-        align-self: end;
-    grid-area: info;
-    text-align: center; }
+  background-image: url("../../assets/images/dark-wood.png"); }
+  .site-footer .container {
+    display: grid;
+    grid-template-columns: 250px, auto, 250px;
+    grid-template-rows: auto 150px;
+    grid-template-areas: "contact hours logo" "info info info";
+    justify-items: center; }
+    .site-footer .container .contact-info {
+      grid-area: contact; }
+    .site-footer .container .business-hours {
+      grid-area: hours; }
+    .site-footer .container .logo {
+      grid-area: logo;
+      color: white; }
+    .site-footer .container .site-info {
+      -ms-flex-item-align: end;
+          align-self: end;
+      grid-area: info;
+      text-align: center; }
 
 .site-header {
   width: 100vw;
   display: grid;
-  grid-template-columns: 15% 50% 35%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-template-columns: 10% 50% 40%;
   grid-template-areas: "sitelogo empty navbar";
-  color: white; }
+  position: absolute; }
 
 .site-logo {
   width: 3rem;
@@ -754,6 +785,9 @@ object {
   grid-area: navbar;
   justify-self: flex-end; }
 
+.site-emblem {
+  position: absolute; }
+
 .hp-products {
   height: 600px;
   display: -webkit-box;
@@ -764,9 +798,6 @@ object {
       -ms-flex-direction: row;
           flex-direction: row; }
 
-.entry-title {
-  display: none; }
-
 .hp-blog-posts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -776,5 +807,41 @@ object {
       -ms-flex-direction: row;
           flex-direction: row; }
 
-.hero-image-header {
-  height: 100vh; }
+.about-body {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10%; }
+
+.taxonomy-headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  text-transform: uppercase; }
+  .taxonomy-headings a {
+    margin: 5px;
+    color: #248A83;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none; }
+  .taxonomy-headings a:hover {
+    color: #2f1339; }
+
+.product-icons {
+  border-top: 2px dashed #a1a1a1a1;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  width: 75%; }
+  .product-icons .hentry {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }

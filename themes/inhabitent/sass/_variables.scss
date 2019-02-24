@@ -15,9 +15,16 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: #248A83;
+$color__link-visited: #248A83;
+$color__link-hover: #2f1339;
+
+$green__brand:#248A83;
+$purple__brand:#2f1339;
+$orange__brand:#d99054;
+$yellow__brand:#f0e4d1;
+$greylight__brand:#a1a1a1;
+$greymed__brand:#808080;
 
 // Typography
 
@@ -26,3 +33,9 @@ $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+
+//Borders
+
+$solid__border: 1px, solid, #e1e1e1;
+$dashed__border: 1px, dashed, #c8c8c8;

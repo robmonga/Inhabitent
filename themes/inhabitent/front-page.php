@@ -14,7 +14,12 @@ else : ?>
 <?php endif; ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<div class="hero-image"></div>
+			<div class="hero-image">
+				<div class="site-emblem">
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/inhabitent-logo-full.svg" alt="logo"/>
+				</div>
+			</div>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
