@@ -677,9 +677,6 @@ a {
 .hero-image-header {
   height: 100vh; }
 
-.entry-title {
-  display: none; }
-
 .type-product {
   border: 1px, solid, #e1e1e1; }
 
@@ -747,17 +744,37 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Pages with Sidebars*/
-.site-content {
+.search-results .site-content, .page-template-default .site-content, .blog .site-content {
   display: grid;
   grid-template-columns: 70vw 30vw;
   grid-template-rows: 100vw;
   grid-template-areas: "xontent sidebar"; }
 
+.search-results .content-area, .page-template-default .content-area, .blog .content-area {
+  grid-area: xontent; }
+
 #secondary {
   grid-area: sidebar; }
 
-#primary {
-  grid-area: xontent; }
+.blog {
+  display: grid;
+  grid-template-columns: 70vw; }
+  .blog .type-post {
+    position: relative; }
+
+.entry-header {
+  position: relative; }
+  .entry-header .entry-title {
+    background: #248A83;
+    position: absolute;
+    text-decoration: none; }
+  .entry-header .entry-meta {
+    position: absolute;
+    background: #248A83;
+    -webkit-text-decoration: none #fff;
+            text-decoration: none #fff; }
+  .entry-header img {
+    position: relative; }
 
 .site-footer {
   background-image: url("../../assets/images/dark-wood.png"); }

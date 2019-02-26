@@ -4,19 +4,52 @@
 
 /* Pages with Sidebars*/
 
-.site-content    {
+.search-results, .page-template-default, .blog {
+   .site-content {
     display:grid;
     grid-template-columns: 70vw 30vw;
     grid-template-rows: 100vw;
     grid-template-areas: "xontent sidebar";
-  
+   }
+    .content-area {
+    grid-area: xontent;
+    }
 }
-
 
 
 #secondary {
     grid-area: sidebar;
 }
-#primary {
-    grid-area: xontent;
+
+
+
+// ABOUT.PHP / JOURNAL
+
+.blog{
+    display:grid; 
+    grid-template-columns: 70vw;
+    .type-post {
+        position: relative;
+
+
+    }
+}
+
+.entry-header {
+    position: relative;
+    .entry-title{
+        background:$green__brand;
+        position: absolute;
+        text-decoration: none;
+    }
+    .entry-meta {
+        position: absolute;
+        background:$green__brand;
+        text-decoration: none #fff;
+    }
+    img {
+        position: relative;
+
+    }
+    
 }
