@@ -2,6 +2,21 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page */
+/* Pages with Sidebars*/
+
+.site-content    {
+    display:grid;
+    grid-template-columns: 70vw 30vw;
+    grid-template-rows: 100vw;
+    grid-template-areas: "xontent sidebar";
+  
+}
 
 
+
+#secondary {
+    grid-area: sidebar;
+}
+#primary {
+    grid-area: xontent;
+}

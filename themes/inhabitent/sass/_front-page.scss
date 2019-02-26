@@ -1,14 +1,65 @@
+h1 h2 {
+    font-weight: 400;
+    color:#2f1339;
+    font: outline;
+}
+
 .site-emblem {
     position: absolute;
+    top: 25%;
+    left: 40%;
 }
 
 .hp-products {
-    height:600px;
-    display: flex;
+    display: grid;
+    grid-template-rows: 100% 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem ;
+    max-width: 100vw;
+    
+    img {
+        height:70px;
+        width:auto;
+    }
+    &:hover {
+        // border;
+    }
+}
+.shop-stuff-container {
+    text-align: center;
+}
+.hp-product-types {
+    align-content: center;
+    align-items: center;
+    border: $solid__border;
+    border-top: $solid__border; 
+    box-sizing: border-box;
+}
+
+.hp-button {
+    @include green-button;
+}
+.hp-blog-posts {
+    display: none;
     flex-direction: row;
 }
 
-.hp-blog-posts {
-    display: flex;
-    flex-direction: row;
+.hp-adventures {
+    display: none;
+    grid-template-areas: "heading heading heading"
+                         " story story"
+                         "story story story";
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
+    
+    
+    h2 {
+        grid-area: heading;
+    }
+
+    #go-to-post{
+        grid-area: story;
+
+    }
+
 }

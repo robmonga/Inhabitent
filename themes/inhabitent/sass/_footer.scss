@@ -8,9 +8,13 @@
 		grid-template-areas: "contact hours logo"
 							"info info info";
 		justify-items: center;
+		padding-top: 3rem;
 		
-			.contact-info {
+		
+		
+		.contact-info {
 			grid-area: contact;
+			
 		}
 
 		.business-hours {
@@ -19,7 +23,8 @@
 		
 		.logo {
 			grid-area: logo;
-			color: white;
+			padding-top:1rem;
+
 		}
 
 		.site-info {
@@ -30,5 +35,8 @@
 
 		}
 	}
+}
+p.site-footer {
+	color:#fff;
 }
 
