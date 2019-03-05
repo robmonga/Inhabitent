@@ -13,10 +13,10 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 		<?php $product_types=get_terms ?>
 			<header class="page-header">
-			<h1>Shop Stuff</h1>
-				<!-- <?php
+			<!-- <h1>Shop Stuff</h1> -->
+				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
-				?> -->
+				?>
 			</header><!-- .page-header -->
 			<!-- the loop that brings the taxonomy-product  -->
 			<section class="taxonomy-headings">

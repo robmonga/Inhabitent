@@ -10,24 +10,22 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="container">
-				<div class="contact-info">
-					<h6>contact info</h6>
-					<br>
+					<div class="contact-info">
+							<h6>contact info</h6>
 					<p>info@inhabitent.com</p>
-					<br>
 					<p>778-456-7891</p>
-					<br>
-					<p><i class="fab fa-facebook-square"></i>
-					<i class="fab fa-twitter-square"></i>
-					<i class="fab fa-instagram"></i></p>
+					<p>
+						<i class="fab fa-facebook-square"></i>
+						<i class="fab fa-twitter-square"></i>
+						<i class="fab fa-instagram"></i>
+					</p>
 				</div>
 				
 				<div class="business-hours">
-					<h6>Business Hours</h6><br>
-					<p>Monday-Friday: 9am to 5pm<br>
-					Saturday: 10am to 2pm<br>
-					Sunday: Closed</p>
+					<h6>Business Hours</h6>
+					<p>Monday-Friday: 9am to 5pm</p>
+					<p>Saturday: 10am to 2pm</p>
+					<p>Sunday: Closed</p>
 				</div>
 				
 				<div class="site-info"> 

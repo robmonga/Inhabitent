@@ -4,43 +4,42 @@
 
 /* Pages with Sidebars*/
 
-.search-results, .page-template-default, .blog {
-   .site-content {
-    display:grid;
-    grid-template-columns: 70vw 30vw;
-    grid-template-rows: 100vw;
-    grid-template-areas: "xontent sidebar";
-   }
-    .content-area {
-    grid-area: xontent;
-    }
-}
-
-
 #secondary {
     grid-area: sidebar;
 }
 
+/* Margin rule */
 
+.site-header {
+    grid-area: header;
+       }
+.site-content {
+   grid-area: content;    
+       }
+.site-footer {
+  grid-area: footer;
+       }
 
+.site-header,
+.site-content,
+.site-footer {
+    margin: 0px 20px 0px;
+}
+.hero-image-header {
+    margin: 0 0;
+}
 // ABOUT.PHP / JOURNAL
 
-.blog{
-    display:grid; 
-    grid-template-columns: 70vw;
-    .type-post {
-        position: relative;
 
-
-    }
-}
 
 .entry-header {
     position: relative;
+    // conflicts with the headings on every page.
     .entry-title{
-        background:$green__brand;
-        position: absolute;
-        text-decoration: none;
+    //     background:$green__brand;
+    //     position: absolute;
+    //     text-decoration: none;
+    display: none;
     }
     .entry-meta {
         position: absolute;

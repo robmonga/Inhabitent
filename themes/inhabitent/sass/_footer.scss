@@ -8,6 +8,8 @@
 							"info info info";
 		justify-items: center;
 		padding-top: 3rem;
+		height: 500px;
+		color:$white;
 }		
 		
 		
@@ -18,6 +20,7 @@
 
 		.business-hours {
 			grid-area: hours;
+			
 		}
 		
 		.logo {

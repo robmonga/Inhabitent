@@ -396,6 +396,9 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+a {
+  text-decoration: none; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -744,30 +747,31 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Pages with Sidebars*/
-.search-results .site-content, .page-template-default .site-content, .blog .site-content {
-  display: grid;
-  grid-template-columns: 70vw 30vw;
-  grid-template-rows: 100vw;
-  grid-template-areas: "xontent sidebar"; }
-
-.search-results .content-area, .page-template-default .content-area, .blog .content-area {
-  grid-area: xontent; }
-
 #secondary {
   grid-area: sidebar; }
 
-.blog {
-  display: grid;
-  grid-template-columns: 70vw; }
-  .blog .type-post {
-    position: relative; }
+/* Margin rule */
+.site-header {
+  grid-area: header; }
+
+.site-content {
+  grid-area: content; }
+
+.site-footer {
+  grid-area: footer; }
+
+.site-header,
+.site-content,
+.site-footer {
+  margin: 0px 20px 0px; }
+
+.hero-image-header {
+  margin: 0 0; }
 
 .entry-header {
   position: relative; }
   .entry-header .entry-title {
-    background: #248A83;
-    position: absolute;
-    text-decoration: none; }
+    display: none; }
   .entry-header .entry-meta {
     position: absolute;
     background: #248A83;
@@ -777,70 +781,62 @@ object {
     position: relative; }
 
 .site-footer {
-  background-image: url("../../assets/images/dark-wood.png"); }
-  .site-footer .container {
-    display: grid;
-    grid-template-columns: 250px, auto, 250px;
-    grid-template-rows: auto 150px;
-    grid-template-areas: "contact hours logo" "info info info";
-    justify-items: center;
-    padding-top: 3rem; }
-    .site-footer .container .contact-info {
-      grid-area: contact; }
-    .site-footer .container .business-hours {
-      grid-area: hours; }
-    .site-footer .container .logo {
-      grid-area: logo;
-      padding-top: 1rem; }
-    .site-footer .container .site-info {
-      -ms-flex-item-align: end;
-          align-self: end;
-      grid-area: info;
-      text-align: center; }
-
-p.site-footer {
+  background-image: url("../../assets/images/dark-wood.png");
+  display: grid;
+  grid-template-columns: 250px, auto, 250px;
+  grid-template-rows: auto 150px;
+  grid-template-areas: "contact hours logo" "info info info";
+  justify-items: center;
+  padding-top: 3rem;
+  height: 500px;
   color: #fff; }
+
+.contact-info {
+  grid-area: contact; }
+
+.business-hours {
+  grid-area: hours; }
+
+.logo {
+  grid-area: logo;
+  padding-top: 1rem; }
+
+.site-info {
+  -ms-flex-item-align: end;
+      align-self: end;
+  grid-area: info;
+  text-align: center; }
 
 .site-header {
   width: 100vw;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  grid-template-columns: 10% 50% 40%;
-  grid-template-areas: "sitelogo empty navbar";
-  position: absolute; }
+  grid-template-columns: 10% 50% 40%; }
 
 .site-logo {
-  width: 3rem;
-  grid-area: sitelogo; }
+  width: 3rem; }
 
 .main-navigation {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  grid-area: navbar;
-  justify-self: flex-end; }
+  grid-column-start: 3; }
 
-h1 h2 {
-  font-weight: 400;
-  color: #2f1339;
-  font: outline; }
+.hfeed {
+  display: grid;
+  grid-template-areas: "header" "content" "footer";
+  grid-template-rows: auto; }
 
 .site-emblem {
-  position: absolute;
   top: 25%;
-  left: 40%; }
+  left: 40%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  z-index: 1;
+  position: absolute; }
 
 .hp-products {
   display: grid;
-  grid-template-rows: 100% 100%;
+  grid-template-rows: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
-  max-width: 100vw; }
+  grid-gap: 5px; }
   .hp-products img {
     height: 70px;
     width: auto; }
@@ -865,21 +861,10 @@ h1 h2 {
   padding: 10px; }
 
 .hp-blog-posts {
-  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
-
-.hp-adventures {
-  display: none;
-  grid-template-areas: "heading heading heading" " story story" "story story story";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr; }
-  .hp-adventures h2 {
-    grid-area: heading; }
-  .hp-adventures #go-to-post {
-    grid-area: story; }
 
 .hero-image-header {
   width: 100vw;
@@ -914,7 +899,8 @@ h1 h2 {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 25% 25% 25% 25%;
-  width: 75%; }
+  width: 75%;
+  color: black; }
   .product-icons .hentry {
     display: -webkit-box;
     display: -ms-flexbox;

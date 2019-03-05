@@ -37,5 +37,4 @@
 				</nav><!-- #site-navigation -->
 
 			</header><!-- #masthead -->
-		<a href=" get_home_url"></a>
 			<div id="content" class="site-content">

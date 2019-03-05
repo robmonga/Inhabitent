@@ -1,27 +1,28 @@
+.hfeed {
+    display:grid;
+    grid-template-areas: "header"
+                        "content"
+                        "footer";
+    grid-template-rows: auto;
 
+    }
 
-h1 h2 {
-    font-weight: 400;
-    color:#2f1339;
-    font: outline;
-}
-
+    
 .site-emblem  {
-    top: 25%;
-    left: 40%;
+top: 25%;
+left: 40%;
     order:2;
     z-index:1;
     position:absolute;
 }
 
-
+//  PRODUCT GRID
 .hp-products {
     display: grid;
-    grid-template-rows: 100% 100%;
+    grid-template-rows: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem ;
-    max-width: 100vw;
-    
+    grid-gap: 5px ;
+
     img {
         height:70px;
         width:auto;
@@ -49,23 +50,3 @@ h1 h2 {
 }
 
 
-.hfeed {
-    display:grid;
-    grid-template-areas: "header"
-                        "content"
-                        "footer";
-    grid-template-rows: auto;
-
-    }
-.site-header {
-     grid-area: header;
-        }
-.site-content {
-    grid-area: content;
-    border:$test;
-    
-        }
-.site-footer {
-            grid-area: footer;
-            height:500px;
-        }
