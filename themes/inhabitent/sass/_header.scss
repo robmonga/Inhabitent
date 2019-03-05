@@ -5,20 +5,14 @@
 .site-header {
     width: 100vw;
     display: grid;
-    justify-content: center;
     grid-template-columns: 10% 50% 40%;
-    grid-template-areas: "sitelogo empty navbar"; 
-    position: absolute;    
 }
 
 .site-logo {
     width: 3rem;
-    grid-area: sitelogo;
 }
 
 .main-navigation {
-    align-items:flex-end;
-    display:flex;
-    grid-area: navbar;
-    justify-self: flex-end;
+    grid-column-start: 3;
+  
 }
