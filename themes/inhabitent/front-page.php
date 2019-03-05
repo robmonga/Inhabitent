@@ -22,7 +22,7 @@ get_header(); ?>
 		else : ?>
 
 		<?php endif; ?>
-		
+
 		<?php if ( is_home() && ! is_front_page() ) : ?>
 			<header>
 				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
@@ -52,15 +52,14 @@ get_header(); ?>
 	</section><!-- end of the product categories  -->
 	
 	<!-- get blog posts  -->
-	<section class="hp-blog-posts">
+	<section class="hp-blog-posts"> <!-- TODO: is there a better way to set these up? -->
 		<h2>inhabitent journal</h2>
-		<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-		<?php
-		 the_post_thumbnail('medium_large');
-		 the_date();
-		 comments_number();
-		 the_title();
-		 ?>
+		<?php foreach ( $product_posts as $post ) : setup_postdata($post); ?>
+	<div class ="hp-blog-post"><?php the_post_thumbnail('medium'); ?>
+		<p><?php the_date();?></p>
+		<p><?php comments_number();?></p>
+		<h3><?php the_title();?></h3>
+	</div>
 	<?php endforeach; wp_reset_postdata(); ?>
 </section><!-- end of blog post retrieval -->
 	
@@ -68,15 +67,15 @@ get_header(); ?>
 	<section class="hp-adventures">
 	<h2>latest adventures</h2>
 		<?php $adventure=inhabitent_get_latest_adventures();?>
-		<div class="hp-adventure-types">
-				<?php foreach ( $adventure as $post ) : setup_postdata( $post ); ?>
-					  <?php
+		<?php foreach ( $adventure as $post ) : setup_postdata( $post ); ?>
+					<div class= "hp-adventure-post"> 		
+					 <?php
 					 the_post_thumbnail('medium_large');
 					 the_title();
 					 ?>
 					<input type="button" value="READ MORE" class="homebutton" id="go-to-post" onClick="document.location.href='<?php echo esc_url( get_permalink())?>'" />					 
-				<?php endforeach; wp_reset_postdata(); ?>		
-		</div>
+				</div>
+					<?php endforeach; wp_reset_postdata(); ?>		
 	</section><!-- end of adventures  -->
 			
 		<?php endwhile; ?>

@@ -17,6 +17,9 @@ left: 40%;
 }
 
 //  PRODUCT GRID
+.shop-stuff-container {
+    text-align: center;
+}
 .hp-products {
     display: grid;
     grid-template-rows: 100%;
@@ -31,22 +34,63 @@ left: 40%;
         // border;
     }
 }
-.shop-stuff-container {
-    text-align: center;
-}
 .hp-product-types {
     align-content: center;
     align-items: center;
     border: $solid__border;
-    border-top: $solid__border; 
+    border-top-width: 5px; 
     box-sizing: border-box;
 }
 
 .hp-button {
     @include green-button;
 }
+
 .hp-blog-posts {
-    flex-direction: row;
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 50px 400px;
+   grid-gap: 5px;
+   align-items: center;
+   justify-items: center;
+
+   h2 {
+       grid-column: 1 / 4;
+       align-self: center;
+   }
+   
+   .hp-blog-post {
+       border: $solid__border;
+       img {
+           border-bottom: $solid__border;
+           border-bottom-width:5px;
+       }
+   }
 }
 
+// ADVENTURES GRID 
 
+.hp-adventures {
+    display: grid;
+    grid-template-rows: 100px 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header"
+                         "tile1 tile1 tile2 tile2"
+                         "tile1 tile1 tile3 tile4";
+        :first-child {
+            grid-area:header;
+            align-items: center;
+                   } 
+           :nth-child(2) {
+               grid-area: tile1;
+           }
+           :nth-child(3) {
+                grid-area: tile2;
+            }
+           :nth-child(4){
+           grid-area: tile3;
+           }
+           :nth-child(5) {
+               grid-area: tile4;
+           }
+}
