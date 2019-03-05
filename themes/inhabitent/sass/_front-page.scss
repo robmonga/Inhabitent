@@ -1,14 +1,19 @@
+
+
 h1 h2 {
     font-weight: 400;
     color:#2f1339;
     font: outline;
 }
 
-.site-emblem {
-    position: absolute;
+.site-emblem  {
     top: 25%;
     left: 40%;
+    order:2;
+    z-index:1;
+    position:absolute;
 }
+
 
 .hp-products {
     display: grid;
@@ -40,26 +45,27 @@ h1 h2 {
     @include green-button;
 }
 .hp-blog-posts {
-    display: none;
     flex-direction: row;
 }
 
-.hp-adventures {
-    display: none;
-    grid-template-areas: "heading heading heading"
-                         " story story"
-                         "story story story";
-    grid-template-columns:  1fr 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr;
-    
-    
-    h2 {
-        grid-area: heading;
-    }
 
-    #go-to-post{
-        grid-area: story;
+.hfeed {
+    display:grid;
+    grid-template-areas: "header"
+                        "content"
+                        "footer";
+    grid-template-rows: auto;
 
     }
-
-}
+.site-header {
+     grid-area: header;
+        }
+.site-content {
+    grid-area: content;
+    border:$test;
+    
+        }
+.site-footer {
+            grid-area: footer;
+            height:500px;
+        }
