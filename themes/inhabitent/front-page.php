@@ -43,9 +43,9 @@ get_header(); ?>
 					<?php $product_types=get_terms('product_type');?>
 					<?php foreach ( $product_types as $term ) : setup_postdata( $term ); ?>
 					<div class="hp-product-types">
-						<img src=<?php echo get_template_directory_uri().'/assets/images/' . $term->slug . '.svg'?>>
+						<img src="<?php echo get_template_directory_uri().'/assets/images/' . $term->slug . '.svg'?>" alt= "<?php echo $term->name ?>">
 						<p><?php echo $term->description ?></p>
-						   <a class="hp-button"href=<?php echo get_term_link($term)?>> <?php echo $term->name?> stuff</a>
+						   <a class="hp-button" href=<?php echo get_term_link($term)?>> <?php echo $term->name?> stuff</a>
 					</div>
 					<?php endforeach; wp_reset_postdata(); ?>
 					</div>
@@ -69,11 +69,9 @@ get_header(); ?>
 		<?php $adventure=inhabitent_get_latest_adventures();?>
 		<?php foreach ( $adventure as $post ) : setup_postdata( $post ); ?>
 					<div class= "hp-adventure-post"> 		
-					 <?php
-					 the_post_thumbnail('medium_large');
-					 the_title();
-					 ?>
-					<input type="button" value="READ MORE" class="homebutton" id="go-to-post" onClick="document.location.href='<?php echo esc_url( get_permalink())?>'" />					 
+					 <?php the_post_thumbnail('medium_large'); ?>
+					 <p><?php the_title(); ?></p>
+					<input type="button" value="READ MORE" class="homebutton" onClick="document.location.href='<?php echo esc_url( get_permalink())?>'" />					 
 				</div>
 					<?php endforeach; wp_reset_postdata(); ?>		
 	</section><!-- end of adventures  -->

@@ -9,7 +9,8 @@
 
 			</div><!-- #content -->
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
+			<footer id="colophon" class="site-footer " role="contentinfo">
+				<!-- <div class="site-info"> -->
 					<div class="contact-info">
 							<h6>contact info</h6>
 					<p>info@inhabitent.com</p>
@@ -33,7 +34,7 @@
 				</div>
 				<div class="logo">
 				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/inhabitent-logo-text.svg" alt="inhabitent logo"/></a>
-			</div><!-- .site-info -->
+			<!-- </div>.site-info -->
 			</footer><!-- #colophon -->
 			</div>
 		</div><!-- #page -->
