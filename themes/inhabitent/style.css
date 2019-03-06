@@ -567,6 +567,15 @@ a {
   text-align: right;
   width: 50%; }
 
+.hp-adventure-post {
+  display: grid; }
+
+.adv-button {
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  position: absolute; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -818,10 +827,9 @@ object {
 .main-navigation {
   grid-column-start: 3; }
 
-.hfeed {
-  display: grid;
-  grid-template-areas: "header" "content" "footer";
-  grid-template-rows: auto; }
+.transparent-header {
+  background: rgba(255, 0, 0, 0);
+  position: fixed; }
 
 .site-emblem {
   top: 25%;
@@ -832,6 +840,9 @@ object {
   z-index: 1;
   position: absolute; }
 
+.shop-stuff-container {
+  text-align: center; }
+
 .hp-products {
   display: grid;
   grid-template-rows: 100%;
@@ -841,9 +852,6 @@ object {
     height: 70px;
     width: auto; }
 
-.shop-stuff-container {
-  text-align: center; }
-
 .hp-product-types {
   -ms-flex-line-pack: center;
       align-content: center;
@@ -851,7 +859,7 @@ object {
       -ms-flex-align: center;
           align-items: center;
   border: 1px, solid, #e1e1e1;
-  border-top: 1px, solid, #e1e1e1;
+  border-top-width: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
@@ -861,20 +869,41 @@ object {
   padding: 10px; }
 
 .hp-blog-posts {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 400px;
+  grid-gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center; }
+  .hp-blog-posts h2 {
+    grid-column: 1 / 4;
+    -ms-flex-item-align: center;
+        align-self: center; }
+  .hp-blog-posts .hp-blog-post {
+    border: 1px, solid, #e1e1e1; }
+    .hp-blog-posts .hp-blog-post img {
+      border-bottom: 1px, solid, #e1e1e1;
+      border-bottom-width: 5px; }
 
-.hero-image-header {
-  width: 100vw;
-  display: block; }
-
-.a {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10%; }
+.hp-adventures {
+  display: grid;
+  grid-template-rows: 100px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header header header header" "tile1 tile1 tile2 tile2" "tile1 tile1 tile3 tile4"; }
+  .hp-adventures :first-child {
+    grid-area: header;
+    -ms-flex-item-align: center;
+        align-self: center; }
+  .hp-adventures :nth-child(2) {
+    grid-area: tile1; }
+  .hp-adventures :nth-child(3) {
+    grid-area: tile2; }
+  .hp-adventures :nth-child(4) {
+    grid-area: tile3; }
+  .hp-adventures :nth-child(5) {
+    grid-area: tile4; }
 
 .taxonomy-headings {
   display: -webkit-box;

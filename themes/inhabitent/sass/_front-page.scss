@@ -1,13 +1,4 @@
-.hfeed {
-    display:grid;
-    grid-template-areas: "header"
-                        "content"
-                        "footer";
-    grid-template-rows: auto;
 
-    }
-
-    
 .site-emblem  {
 top: 25%;
 left: 40%;
@@ -77,9 +68,9 @@ left: 40%;
     grid-template-areas: "header header header header"
                          "tile1 tile1 tile2 tile2"
                          "tile1 tile1 tile3 tile4";
-        :first-child {
+            :first-child {
             grid-area:header;
-            align-items: center;
+            align-self:center;
                    } 
            :nth-child(2) {
                grid-area: tile1;
@@ -93,4 +84,9 @@ left: 40%;
            :nth-child(5) {
                grid-area: tile4;
            }
+             
+    .hp-adventure-post {
+  
+    }
 }
+
