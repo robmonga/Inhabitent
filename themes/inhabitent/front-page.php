@@ -71,7 +71,7 @@ get_header(); ?>
 					<div class= "hp-adventure-post"> 		
 					 <?php the_post_thumbnail('medium_large'); ?>
 					 <p><?php the_title(); ?></p>
-					<input type="button" value="READ MORE" class="homebutton" onClick="document.location.href='<?php echo esc_url( get_permalink())?>'" />					 
+					<a class="adv-button"href= '<?php echo esc_url( get_permalink())?>'>Read More</a>					 
 				</div>
 					<?php endforeach; wp_reset_postdata(); ?>		
 	</section><!-- end of adventures  -->

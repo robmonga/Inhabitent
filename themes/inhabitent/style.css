@@ -1,5 +1,5 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: Inhabitent Theme
 Theme URI: http://underscores.me/
 Author: RED Academy
 Author URI: http://www.redacademy.com
@@ -12,7 +12,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-RED Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Inhabitent Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -280,20 +280,17 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   clear: both;
-  font-family: 'Novecento Sans Web';
+  font-family: "Novecento Sans Web";
   text-transform: uppercase; }
-
-h6 {
-  clear: both;
-  font-family: 'Novecento Sans Web';
-  text-transform: uppercase;
-  color: #d99054; }
+  h1 h6, h2 h6, h3 h6, h4 h6, h5 h6 {
+    color: #d99054; }
 
 /* Copy */
 p {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  font-family: "Merriweather Web"; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -755,11 +752,18 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Pages with Sidebars*/
-#secondary {
-  grid-area: sidebar; }
+/* ===========   HEADER   =====================*/
+.site-header {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 10% 50% 40%; }
+  .site-header .site-logo {
+    width: 3rem; }
+  .site-header .main-navigation {
+    grid-column-start: 3; }
 
-/* Margin rule */
+/*========= Pages with Sidebars=================*/
+.widget-area
 .site-header {
   grid-area: header; }
 
@@ -768,14 +772,6 @@ object {
 
 .site-footer {
   grid-area: footer; }
-
-.site-header,
-.site-content,
-.site-footer {
-  margin: 0px 20px 0px; }
-
-.hero-image-header {
-  margin: 0 0; }
 
 .entry-header {
   position: relative; }
@@ -789,12 +785,13 @@ object {
   .entry-header img {
     position: relative; }
 
+/* ============ FOOTER ============ */
 .site-footer {
   background-image: url("../../assets/images/dark-wood.png");
   display: grid;
   grid-template-columns: 250px, auto, 250px;
   grid-template-rows: auto 150px;
-  grid-template-areas: "contact hours logo" "info info info";
+  grid-template-areas: "contact hours logo" "info info info";
   justify-items: center;
   padding-top: 3rem;
   height: 500px;
@@ -816,21 +813,6 @@ object {
   grid-area: info;
   text-align: center; }
 
-.site-header {
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 10% 50% 40%; }
-
-.site-logo {
-  width: 3rem; }
-
-.main-navigation {
-  grid-column-start: 3; }
-
-.transparent-header {
-  background: rgba(255, 0, 0, 0);
-  position: fixed; }
-
 .site-emblem {
   top: 25%;
   left: 40%;
@@ -844,10 +826,9 @@ object {
   text-align: center; }
 
 .hp-products {
-  display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .hp-products img {
     height: 70px;
     width: auto; }
@@ -859,9 +840,7 @@ object {
       -ms-flex-align: center;
           align-items: center;
   border: 1px, solid, #e1e1e1;
-  border-top-width: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  border-top-width: 5px; }
 
 .hp-button {
   background: #248A83;

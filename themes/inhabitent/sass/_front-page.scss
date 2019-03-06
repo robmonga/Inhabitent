@@ -12,11 +12,7 @@ left: 40%;
     text-align: center;
 }
 .hp-products {
-    display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 5px ;
-
+    display: flex;
     img {
         height:70px;
         width:auto;
@@ -30,7 +26,6 @@ left: 40%;
     align-items: center;
     border: $solid__border;
     border-top-width: 5px; 
-    box-sizing: border-box;
 }
 
 .hp-button {

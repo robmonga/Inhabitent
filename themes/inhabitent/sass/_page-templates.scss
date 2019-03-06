@@ -2,12 +2,24 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Pages with Sidebars*/
+/* ===========   HEADER   =====================*/  
 
-#secondary {
-    grid-area: sidebar;
+.site-header {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 10% 50% 40%;
+    .site-logo {
+        width: 3rem;
+    }
+    
+    .main-navigation {
+        grid-column-start: 3;
+    }
 }
 
+/*========= Pages with Sidebars=================*/
+
+.widget-area
 /* Margin rule */
 
 .site-header {
@@ -20,17 +32,8 @@
   grid-area: footer;
        }
 
-.site-header,
-.site-content,
-.site-footer {
-    margin: 0px 20px 0px;
-}
-.hero-image-header {
-    margin: 0 0;
-}
+
 // ABOUT.PHP / JOURNAL
-
-
 
 .entry-header {
     position: relative;
@@ -52,3 +55,44 @@
     }
     
 }
+
+
+
+/* ============ FOOTER ============ */ 
+
+.site-footer {
+	background-image: url("../../assets/images/dark-wood.png");
+		display:grid;
+		grid-template-columns: 250px, auto, 250px;
+		grid-template-rows: auto 150px;
+		grid-template-areas: "contact hours logo"
+							"info info info";
+		justify-items: center;
+		padding-top: 3rem;
+		height: 500px;
+		color:$white;
+}		
+
+		.contact-info {
+			grid-area: contact;
+
+		}
+
+		.business-hours {
+			grid-area: hours;
+			
+		}
+		
+		.logo {
+			grid-area: logo;
+			padding-top:1rem;
+
+		}
+
+		.site-info {
+			align-self: end;
+			grid-area: info;
+			text-align: center;
+			
+
+		}
