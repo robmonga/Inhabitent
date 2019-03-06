@@ -13,22 +13,22 @@ textarea {
 
 /* Headings */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
 	clear: both;
-	font-family: 'Novecento Sans Web';
+	font-family: $font__nov;
 	text-transform: uppercase;
+
+	& h6 {
+		color:$orange__brand;
+	}
 }
-h6 {
-	clear: both;
-	font-family: 'Novecento Sans Web';
-	text-transform: uppercase;
-	color: $orange__brand;
-}
+
 
 /* Copy */
 
 p {
 	margin-bottom: $base__space-unit;
+	font-family: $font__mer;
 }
 
 dfn, cite, em, i {
